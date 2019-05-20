@@ -6,6 +6,24 @@ body {
 a {
   color: #00B7FF;
 }
-* {
-	background-color: red;
+
+.green{/*[class="green"]*/
+	background-color: #5ade54;
+}
+.orange{
+	background-color: #ffd800;
+}
+.small{
+	font-size: 18px;
+}
+.medium{
+	font-size: 36px;
+}
+.big{
+	font-size: 72px;
+}
+
+form{
+	background: #eee;
+	border: solid 3px #000;
 }
