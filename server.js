@@ -56,6 +56,8 @@ app.get('/', function(req, res) {
       const data = JSON.parse(results[key].doc);
         str += '<tr>';
         str += '<td>'+ data.Name+'</td>';
+        str += '<td>'+ data.geography.Continent+'</td>';
+        str += '<td>'+ data.IndepYear+'</td>';
       str += '</tr>';
       console.log(data);
       }

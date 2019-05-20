@@ -39,6 +39,9 @@ form{
 
 table{
 	border-collapse: collapse;
+}
+
+tr {
 	border-bottom: 1px #bbb solid;
 }
 
