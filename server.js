@@ -52,7 +52,11 @@ app.get('/', function(req, res) {
   // results is an array with one element for every statement in the query:
     // console.log(results);
       // console.log(results[0]); // [{1: 1}]
-    res.send('<p>' + JSON.parse(results)[0].Name + '</p>');
+      var str, arr = JSON.parse(results);
+      for(var key in arr){
+          str+='<p>' + a[key].name + '</p>';
+        }
+    res.send(str);
       
      console.log(results); // [{2: 2}]
     });
