@@ -48,16 +48,20 @@ app.get('/', function(req, res) {
     exports.connection.query('SELECT * FROM countryinfo;', function(error, results, fields) {
       console.log("inside exports");
       if (error) throw error
-
+      var str='<p>hello iasa!</p>';
   // results is an array with one element for every statement in the query:
     try {
-      const data = JSON.parse(results[0].doc).Name;
+      str = '';
+      for(var key in results){
+      const data = JSON.parse(key.doc).Name;
+      str += '<p>'+data+'</p>';
       console.log(data);
+      }
     } catch(err) {
       console.error(err)
     } 
     
-    res.send('<p>hello iasa!</p>');
+    res.send(str);
       
      console.log(results); // [{2: 2}]
     });
