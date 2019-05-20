@@ -53,10 +53,10 @@ app.get('/', function(req, res) {
     // console.log(results);
       // console.log(results[0]); // [{1: 1}]
       var str, arr = JSON.parse(results);
-      for(var key in arr){
-          str+='<p>' + a[key].name + '</p>';
-        }
-    res.send(str);
+      // for(var key in arr){
+      //     str+='<p>' + a[key].name + '</p>';
+      //   }
+    res.send('<p>hello iasa!</p>');
       
      console.log(results); // [{2: 2}]
     });
