@@ -51,7 +51,7 @@ app.get('/', function(req, res) {
 
   // results is an array with one element for every statement in the query:
     try {
-      const data = results[0].Name;
+      const data = JSON.parse(results[0].doc).Name;
       console.log(data);
     } catch(err) {
       console.error(err)
