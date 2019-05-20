@@ -52,6 +52,12 @@ app.get('/', function(req, res) {
   // results is an array with one element for every statement in the query:
     // console.log(results);
       // console.log(results[0]); // [{1: 1}]
+      
+      var a = window.localStorage.todolist ? JSON.parse(window.localStorage.todolist) : [];
+        var todolist = {};
+        todolist.title = results["name"];
+        todolist.name = results["name"];
+        a.push(todolist);
      console.log(results); // [{2: 2}]
     });
   
