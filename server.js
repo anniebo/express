@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
       if (error) throw error
       var str='<p>hello iasa!</p>';
   // results is an array with one element for every statement in the query:
-    try {
+   /* try {
       str = '';
       for(var key in results){
       const data = JSON.parse(results[key].doc).Name;
@@ -59,7 +59,7 @@ app.get('/', function(req, res) {
       }
     } catch(err) {
       console.error(err)
-    } 
+    } */
     
     res.send(str);
       
