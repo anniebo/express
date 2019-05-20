@@ -52,7 +52,7 @@ app.get('/', function(req, res) {
   // results is an array with one element for every statement in the query:
     // console.log(results);
       // console.log(results[0]); // [{1: 1}]
-    res.send('<p>'+results[0]+'</p>');
+    res.send('<p>'+results[0]["name"]+'</p>');
       
      console.log(results); // [{2: 2}]
     });
