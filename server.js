@@ -8,7 +8,7 @@ var pool = mysql.createPool({
   password: "123456789",
   database: "world_x"
 });
-
+app.use(express.static(__dirname + '/public'));
 exports.connection = {
     query: function () {
         var queryArgs = Array.prototype.slice.call(arguments),
@@ -51,7 +51,7 @@ app.get('/', function(req, res) {
       var str='<p>hello iasa!</p>';
   // results is an array with one element for every statement in the query:
     try {
-      str = '<table>';
+      str = '<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />'+'<table>';
       for(var key in results){
       const data = JSON.parse(results[key].doc);
         str += '<tr>';
