@@ -50,7 +50,13 @@ app.get('/', function(req, res) {
       if (error) throw error
 
   // results is an array with one element for every statement in the query:
-     
+    try {
+      const data = JSON.parse(results);
+      console.log(data);
+    } catch(err) {
+      console.error(err)
+    } 
+    
     res.send('<p>hello iasa!</p>');
       
      console.log(results); // [{2: 2}]
