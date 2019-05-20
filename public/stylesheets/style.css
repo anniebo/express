@@ -1,3 +1,5 @@
+/* '/abc' page == index.html*/
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -31,4 +33,15 @@ form{
 [type="button"]:hover{
 	background: #000;
 	color: pink;
+}
+
+/* main page */
+
+table{
+	border-collapse: collapse;
+	border-bottom: 1px #bbb solid;
+}
+
+tr:nth-of-type(2n){
+	background: #ddd;
 }
