@@ -27,3 +27,8 @@ form{
 	background: #eee;
 	border: solid 3px #000;
 }
+
+[type="button"]:hover{
+	background: #000;
+	color: pink;
+}
