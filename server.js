@@ -50,16 +50,19 @@ app.get('/', function(req, res) {
       if (error) throw error
       var str='<p>hello iasa!</p>';
   // results is an array with one element for every statement in the query:
-   /* try {
-      str = '';
+    try {
+      str = '<table>';
       for(var key in results){
-      const data = JSON.parse(results[key].doc).Name;
-      str += '<p>'+data+'</p>';
+      const data = JSON.parse(results[key].doc);
+        str += '<tr>';
+        str += '<td>'+ data.Name+'</td>';
+      str += '</tr>';
       console.log(data);
       }
+      str += '</table>';
     } catch(err) {
       console.error(err)
-    } */
+    } 
     
     res.send(str);
       
