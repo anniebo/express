@@ -53,7 +53,7 @@ app.get('/', function(req, res) {
     try {
       str = '';
       for(var key in results){
-      const data = JSON.parse(key.doc).Name;
+      const data = JSON.parse(results[key].doc).Name;
       str += '<p>'+data+'</p>';
       console.log(data);
       }
