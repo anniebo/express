@@ -1,0 +1,69 @@
+➜  Desktop git clone https://github.com/anniebo/express.git
+Cloning into 'express'...
+remote: Enumerating objects: 5510, done.
+remote: Counting objects: 100% (5510/5510), done.
+remote: Compressing objects: 100% (3478/3478), done.
+remote: Total 5510 (delta 1600), reused 5510 (delta 1600), pack-reused 0
+Receiving objects: 100% (5510/5510), 3.77 MiB | 695.00 KiB/s, done.
+Resolving deltas: 100% (1600/1600), done.
+➜  Desktop git remote show origin
+fatal: not a git repository (or any of the parent directories): .git
+➜  Desktop cd express 
+➜  express git:(master) git remote show origin
+* remote origin
+  Fetch URL: https://github.com/anniebo/express.git
+  Push  URL: https://github.com/anniebo/express.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+➜  express git:(master) git push 
+fatal: unable to connect to cache daemon: Permission denied
+Username for 'https://github.com': ^C
+➜  express git:(master) git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+➜  express git:(master) git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   server.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  express git:(master) ✗ git add server.js 
+➜  express git:(master) ✗ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   server.js
+
+➜  express git:(master) ✗ git commit -m "test commit"
+[master 91d7ad9] test commit
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+➜  express git:(master) git push 
+fatal: unable to connect to cache daemon: Permission denied
+Username for 'https://github.com': annaboiko25@gmail.com
+Password for 'https://annaboiko25@gmail.com@github.com': 
+fatal: unable to connect to cache daemon: Permission denied
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/anniebo/express.git
+   f0550a0..91d7ad9  master -> master
+➜  express git:(master) 
+
